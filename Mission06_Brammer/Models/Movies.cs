@@ -11,7 +11,7 @@ namespace Mission06_Brammer.Models
 
         [ForeignKey("CategoryId")]
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public CategoryM Category { get; set; }
 
         [Required]
         public string Title { get; set; }
@@ -19,11 +19,13 @@ namespace Mission06_Brammer.Models
         [Required]
         public int Year { get; set; } = 2000;
         public string? Director { get; set; }
-        [Required]
         public string Rating { get; set; }
         [Required]
         public bool Edited { get; set; }
-        public string? Lent_To { get; set; }
+        public string? LentTo { get; set; }
+
+        [Required]
+        public bool CopiedToPlex { get; set; }
         public string? Notes { get; set; }
     }
 }

@@ -31,7 +31,7 @@ namespace Mission06_Brammer.Controllers
         public IActionResult Movies()
         {
             ViewBag.Cats = _context.Categories
-                .OrderBy(x => x.CategoryName)
+                .OrderBy(x => x.Category)
                 .ToList();
 
             return View("Movies", new Movies());
@@ -48,7 +48,7 @@ namespace Mission06_Brammer.Controllers
             else
             {
                 ViewBag.Cats = _context.Categories
-                    .OrderBy(x => x.CategoryName)
+                    .OrderBy(x => x.Category)
                     .ToList();
 
                 return View(response);
@@ -72,7 +72,7 @@ namespace Mission06_Brammer.Controllers
 
 
             ViewBag.Cats = _context.Categories
-                .OrderBy(x => x.CategoryName)
+                .OrderBy(x => x.Category)
                 .ToList();
 
             return View("Movies", recordToEdit);
